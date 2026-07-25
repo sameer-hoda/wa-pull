@@ -24,6 +24,15 @@ if [ ! -f .env ]; then
     exit 1
 fi
 
+# Check that GEMINI_API_KEY is not still the placeholder
+if grep -q 'your_gemini_api_key_here' .env 2>/dev/null; then
+    echo "❌ GEMINI_API_KEY is still the placeholder value."
+    echo "   Edit .env and replace it with your actual key:"
+    echo "     nano .env"
+    echo "   Get a free key at https://aistudio.google.com/apikey"
+    exit 1
+fi
+
 # ── Check bridge binary exists ──────────────────────────────────────────────
 if [ ! -f "$BRIDGE_BIN" ]; then
     echo "❌ Go bridge not found at $BRIDGE_BIN"

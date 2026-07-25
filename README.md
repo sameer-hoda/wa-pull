@@ -88,10 +88,19 @@ curl -sSL https://raw.githubusercontent.com/sameer-hoda/wa-pull/main/install.sh 
 ```
 
 ### 2. Add your Gemini API key
+Open `~/.env` and replace the placeholder with your actual key:
 ```bash
 nano ~/wa-pull/.env
 ```
-Get a key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
+Change this line:
+```
+GEMINI_API_KEY="your_gemini_api_key_here"
+```
+To your actual key:
+```
+GEMINI_API_KEY="AIza..."
+```
+Get a free key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey). The free tier is generous — enough for hundreds of hourly bulletins.
 
 ### 3. Build and start the WhatsApp bridge
 ```bash
@@ -156,7 +165,8 @@ git clone https://github.com/sameer-hoda/wa-pull && cd wa-pull
 # Setup
 python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env  # add your GEMINI_API_KEY
+cp .env.example .env
+# Edit .env — replace "your_gemini_api_key_here" with your actual Gemini API key
 
 # Tests
 python3 -m pytest tests/ -v

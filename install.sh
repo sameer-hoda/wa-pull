@@ -78,9 +78,16 @@ echo "  ╚═══════════════════════
 echo ""
 echo "  Next steps:"
 echo ""
-echo "  1. Add your Gemini API key:"
+echo "  1. Edit ~/wa-pull/.env and paste your Gemini API key:"
 echo "     nano $INSTALL_DIR/.env"
-echo "       (get one at https://aistudio.google.com/apikey)"
+echo ""
+echo "     Change this line:"
+echo '       GEMINI_API_KEY="your_gemini_api_key_here"'
+echo ""
+echo "     To (paste your real key between the quotes):"
+echo '       GEMINI_API_KEY="AIza..."'
+echo ""
+echo "     Get a free key at https://aistudio.google.com/apikey"
 echo ""
 echo "  2. Build and run the WhatsApp bridge:"
 echo "     git clone https://github.com/sameer-hoda/wa-slash-commands"
