@@ -19,10 +19,10 @@ Every hour from 8 AM to midnight IST, you get a compact ranked list of what's pe
 
 📋 *Tasks* (20)
 
-🔴 *1* Break CM-page deadlock — Anoop wants a call, Manesh waiting 3h ⚠️
-🟠 *2* Unblock RuPay iOS tokens · Rachit · 24h
-🟡 *3* Fix live counter impressions −3% · 48h
-🟢 *4* Dominos/KFC onboarding · Roshni · 24h
+🔴 *1* Finalize Q3 budget sign-off — finance lead waiting 3h ⚠️
+🟠 *2* Unblock iOS app store review · dev team · 24h
+🟡 *3* Fix dashboard impressions counter −12% · 48h
+🟢 *4* Vendor onboarding for Q3 · ops · 24h
 ...
 
 • archive 1,3 • context 2 • action 4 • send 4A • more
@@ -35,17 +35,17 @@ A real-time daemon scans all your non-archived chats every 10 seconds. When some
 
 ```
 pulse @ 14:06
-📍 Anusha Alam
+📍 Priya Sharma
 
-Anusha asked about the profile you mentioned earlier.
+Priya asked about the vendor contract you mentioned earlier.
 A response is needed before EOD.
 
 📋 *Task created:*
-🟡 *21* Check Anusha's profile today · Sameer · 2h
+🟡 *21* Review vendor contract draft · you · 2h
 
-quick response to Anusha Alam:
-A. Hey, checked the profile — looks good. Moving forward.
-B. Can you share the link again? Need to review.
+quick response to Priya Sharma:
+A. Hey, reviewed the contract — looks good. Moving forward.
+B. Can you share the draft again? Need to review.
 C. Reviewed — let's discuss the approach tomorrow.
 
 send 21 A/B/C
