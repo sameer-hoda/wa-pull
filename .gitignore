@@ -1,0 +1,34 @@
+# ── Secrets ──────────────────────────────────────────────────────────────────
+.env
+
+# ── Database files (contains all WhatsApp chat data) ──────────────────────────
+store/
+
+# ── OKF bundle (contains personal chat summaries, contacts, persona) ──────────
+okf_bundle/groups/
+okf_bundle/contacts/
+okf_bundle/persona.md
+okf_bundle/index.md
+okf_bundle/log.md
+
+# ── Prompt lab dump (contains real chat content for offline testing) ──────────
+prompt_lab.md
+
+# ── PID files ─────────────────────────────────────────────────────────────────
+.bot.pid
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.pytest_cache/
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
