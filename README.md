@@ -8,6 +8,8 @@ No apps to install. No dashboards to check. It lives where you already work.
 curl -sSL https://raw.githubusercontent.com/sameer-hoda/wa-pull/main/install.sh | bash
 ```
 
+![hourlyB overview](product.png)
+
 ## What it does
 
 ### Hourly Bulletin
