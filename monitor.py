@@ -152,8 +152,6 @@ class PulseMonitor:
                     return "user_asked", [m]
                 if f"@{self._own_lid_num}" in content:
                     return "user_asked", [m]
-                if "sameer" in content.lower():
-                    return "user_asked", [m]
 
         # quick_succession: 4+ messages from others in this poll (groups only)
         if len(other_msgs) >= 4 and chat_jid.endswith("@g.us"):

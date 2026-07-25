@@ -325,7 +325,7 @@ def build_persona(progress_callback=None) -> str:
     today = datetime.date.today().isoformat()
     body = f"""---
 type: User Persona
-title: Sameer Hoda — Communication Style
+title: User — Communication Style
 description: How the user writes across WhatsApp, used to draft replies in their voice
 tags: [persona, voice, drafting]
 timestamp: {today}T00:00:00Z

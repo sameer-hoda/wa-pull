@@ -25,13 +25,13 @@ def _connect():
 
 
 def get_own_jid() -> str:
-    """Return the owner's phone JID, e.g. 919967151186@s.whatsapp.net."""
+    """Return the owner's phone JID, e.g. 919876543210@s.whatsapp.net."""
     conn = _connect()
     row = conn.execute("SELECT jid FROM wa.whatsmeow_device LIMIT 1").fetchone()
     conn.close()
     if not row:
         raise RuntimeError("No device row in whatsmeow_device — is the bridge paired?")
-    full_jid = row["jid"]  # e.g. 919967151186:16@s.whatsapp.net
+    full_jid = row["jid"]  # e.g. 919876543210:16@s.whatsapp.net
     phone = full_jid.split(":")[0]
     return f"{phone}@s.whatsapp.net"
 
@@ -50,7 +50,7 @@ def get_mechat_chat_jid() -> str:
         (own_phone,),
     ).fetchone()
     if row:
-        # lid looks like "219541632213229:16@lid" → strip to "219541632213229@lid"
+        # lid looks like "123456789012:16@lid" → strip to "123456789012@lid"
         lid = row["lid"].split(":")[0]
         conn.close()
         return f"{lid}@lid"
@@ -72,7 +72,7 @@ def get_mechat_chat_jid() -> str:
 
 
 def get_own_phone() -> str:
-    """Return just the phone number, e.g. 919967151186."""
+    """Return just the phone number, e.g. 919876543210."""
     jid = get_own_jid()
     return jid.split("@")[0]
 

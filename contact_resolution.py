@@ -2,7 +2,7 @@
 Contact Resolution — resolve raw WhatsApp LIDs/JIDs to human-readable names.
 
 Uses the same whatsapp.db that the Go bridge produces.  The LLM sometimes
-emits raw identifiers like "@153656783589414" in task summaries and drafted
+emits raw identifiers like "@123456789012" in task summaries and drafted
 responses.  This module ensures they are replaced with actual contact names.
 
 Adapted from sandbox/wa_productivity/contact_resolution.py.

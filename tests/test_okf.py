@@ -18,7 +18,7 @@ import okf_reader
 
 def test_safe_filename():
     """Filename sanitization works."""
-    assert okf_builder._safe_filename("CRED Pay Team") == "CRED_Pay_Team"
+    assert okf_builder._safe_filename("Product Team") == "Product_Team"
     assert okf_builder._safe_filename("Test/Group: 1") == "TestGroup_1"
     assert okf_builder._safe_filename("") == "unknown"
 

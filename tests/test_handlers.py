@@ -23,7 +23,7 @@ def test_format_task_list_with_tasks():
     tasks = [
         {"task_number": 1, "title": "Follow up on UPI", "source_chat": "UPI Group",
          "urgency": "critical"},
-        {"task_number": 2, "title": "Review CCBP docs", "source_chat": "CCBP Group",
+        {"task_number": 2, "title": "Review product docs", "source_chat": "Product Group",
          "urgency": "medium"},
     ]
     msg = task_extractor.format_task_list(tasks, session_id="ABC123")

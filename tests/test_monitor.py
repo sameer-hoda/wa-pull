@@ -62,7 +62,7 @@ def test_trigger_detection_user_asked_group_with_name():
     m = PulseMonitor()
     m._own_lid_num = "123456789"
     msgs = [
-        {"chat_jid": "grp@g.us", "chat_name": "Test", "content": "sameer can you review this?", "is_from_me": False, "sender": "Alice"},
+        {"chat_jid": "grp@g.us", "chat_name": "Test", "content": "hello user can you review this?", "is_from_me": False, "sender": "Alice"},
     ]
     trigger, trigger_msgs = m._detect_trigger("grp@g.us", msgs)
     assert trigger == "user_asked"
@@ -98,7 +98,7 @@ def test_trigger_priority_tagged_over_asked():
     m = PulseMonitor()
     m._own_lid_num = "123456789"
     msgs = [
-        {"chat_jid": "grp@g.us", "chat_name": "Test", "content": "@123456789 sameer what do you think?", "is_from_me": False, "sender": "Alice"},
+        {"chat_jid": "grp@g.us", "chat_name": "Test", "content": "@123456789 user what do you think?", "is_from_me": False, "sender": "Alice"},
     ]
     trigger, _ = m._detect_trigger("grp@g.us", msgs)
     assert trigger == "user_tagged"
@@ -111,9 +111,9 @@ def test_build_task_from_result():
         "action_type": "pulse",
         "context": "Something happened.\nIt needs attention.",
         "task": {
-            "title": "Follow up with Anoop",
-            "summary": "Anoop is waiting for a decision",
-            "who_waiting": "Anoop",
+            "title": "Follow up with Bob",
+            "summary": "Bob is waiting for a decision",
+            "who_waiting": "Bob",
             "waiting_hours": 3,
             "deadline": "EOD",
             "urgency": "high",
@@ -122,7 +122,7 @@ def test_build_task_from_result():
         "options": {"A": "nudge", "B": "ask for timeline", "C": "decide now"},
     }
     task = m._build_task(result, "Test Group", "123@g.us")
-    assert task["title"] == "Follow up with Anoop"
+    assert task["title"] == "Follow up with Bob"
     assert task["source_chat"] == "Test Group"
     assert task["source_jid"] == "123@g.us"
     assert task["is_new"] is True
